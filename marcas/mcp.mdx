@@ -41,9 +41,16 @@ MCP (Model Context Protocol) é um padrão aberto para conectar ferramentas de I
 
 <Tabs>
   <Tab title="Claude">
-    <Card title="Adicionar a Conty ao Claude" icon="/icons/sparkles.svg" href="https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Conty&connectorUrl=https%3A%2F%2Fmcp.appconty.com%2Fmcp">
-      Abre o Claude com tudo preenchido. Clique em **Adicionar** e autorize com a sua conta da Conty.
-    </Card>
+    Instale com um clique:
+
+    <a className="conty-install-button" href="https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Conty&connectorUrl=https%3A%2F%2Fmcp.appconty.com%2Fmcp" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+        <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4" />
+      </svg>
+      Adicionar ao Claude
+    </a>
+
+    Depois, clique em **Adicionar** e autorize com a sua conta da Conty.
 
     <Frame caption="Instalação do MCP da Conty no Claude">
       <iframe
@@ -62,6 +69,16 @@ MCP (Model Context Protocol) é um padrão aberto para conectar ferramentas de I
     ```
 
     Depois, digite `/mcp`, selecione **conty** e faça o login.
+  </Tab>
+  <Tab title="Codex">
+    No terminal, adicione o servidor e faça o login:
+
+    ```bash
+    codex mcp add conty --url https://mcp.appconty.com/mcp
+    codex mcp login conty
+    ```
+
+    No app ou na extensão da IDE, abra **MCP servers** → **Add server**, escolha **Streamable HTTP** e use o endereço `https://mcp.appconty.com/mcp`.
   </Tab>
   <Tab title="Cursor">
     Instale com um clique:
