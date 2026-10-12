@@ -45,21 +45,6 @@ MCP (Model Context Protocol) é um padrão aberto para conectar ferramentas de I
 
     Se o vídeo não carregar, [assista no X](https://x.com/Pedrodv/status/2085722802963820996).
   </Tab>
-  <Tab title="ChatGPT">
-    Disponível nos planos pagos do ChatGPT, na versão web.
-
-    <Steps>
-      <Step title="Ative o modo desenvolvedor">
-        Em **Configurações**, procure a opção **Modo desenvolvedor** e ative.
-      </Step>
-      <Step title="Crie o app da Conty">
-        Na área de apps/conectores, clique para **criar** um novo app MCP. Use o nome `Conty`, o endereço `https://mcp.appconty.com/mcp` e a autenticação **OAuth**.
-      </Step>
-      <Step title="Autorize com a sua conta da Conty">
-        O login da Conty abre no navegador. Depois, ative a Conty na conversa pelo menu de ferramentas.
-      </Step>
-    </Steps>
-  </Tab>
   <Tab title="Claude Code">
     ```bash
     claude mcp add --transport http conty https://mcp.appconty.com/mcp
@@ -97,6 +82,21 @@ MCP (Model Context Protocol) é um padrão aberto para conectar ferramentas de I
       }
     }
     ```
+  </Tab>
+  <Tab title="ChatGPT">
+    Disponível nos planos pagos do ChatGPT, na versão web.
+
+    <Steps>
+      <Step title="Ative o modo desenvolvedor">
+        Em **Configurações**, procure a opção **Modo desenvolvedor** e ative.
+      </Step>
+      <Step title="Crie o app da Conty">
+        Na área de apps/conectores, clique para **criar** um novo app MCP. Use o nome `Conty`, o endereço `https://mcp.appconty.com/mcp` e a autenticação **OAuth**.
+      </Step>
+      <Step title="Autorize com a sua conta da Conty">
+        O login da Conty abre no navegador. Depois, ative a Conty na conversa pelo menu de ferramentas.
+      </Step>
+    </Steps>
   </Tab>
   <Tab title="Outros agentes">
     Adicione um **servidor MCP remoto** (HTTP) com o endereço `https://mcp.appconty.com/mcp`. A autenticação é pelo login da Conty, sem chave de API.
