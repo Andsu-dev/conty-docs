@@ -356,6 +356,12 @@
               "marcas/comunidades",
               "marcas/resultados"
             ]
+          },
+          {
+            "group": "Inteligência artificial",
+            "pages": [
+              "marcas/mcp"
+            ]
           }
         ]
       },

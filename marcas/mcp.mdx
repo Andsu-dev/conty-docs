@@ -1,0 +1,101 @@
+---
+title: "MCP da Conty"
+sidebarTitle: "MCP da Conty"
+description: "Conecte a Conty ao seu agente de IA e opere campanhas com creators conversando em linguagem natural."
+keywords:
+  - mcp
+  - model context protocol
+  - ia
+  - agente
+  - claude
+  - cursor
+---
+
+O MCP da Conty leva a operação da plataforma para o **agente de IA que você já usa**. Você conversa em linguagem natural e o agente busca creators, cria campanhas, acompanha candidaturas, revisa entregas e gera relatórios direto na sua conta.
+
+MCP (Model Context Protocol) é um padrão aberto para conectar ferramentas de IA a sistemas externos. Funciona em qualquer agente compatível com **MCP remoto**.
+
+<Warning>
+  **É preciso ter uma assinatura ativa da Conty.** Sem ela, o login não libera o acesso. Fale com o [time da Conty](/help-center/contact) para contratar.
+</Warning>
+
+## Como conectar
+
+<Steps>
+  <Step title="Adicione o servidor no seu agente">
+    Use o nome `Conty` e o endereço:
+
+    ```text
+    https://mcp.appconty.com/mcp
+    ```
+  </Step>
+  <Step title="Faça login com a conta da marca">
+    O login abre no navegador. Entre com e-mail e senha e digite o código enviado por e-mail. Contas de creator não conectam.
+  </Step>
+  <Step title="Escolha as permissões">
+    **Leitura** vem sempre liberada. **Escrita** é opcional: marque se quiser que o agente crie campanhas, envie convites e aprove conteúdos.
+  </Step>
+</Steps>
+
+## Instalar no seu agente
+
+<Tabs>
+  <Tab title="Claude">
+    <Card title="Adicionar a Conty ao Claude" icon="/icons/sparkles.svg" href="https://claude.ai/customize/connectors?modal=add-custom-connector&connectorName=Conty&connectorUrl=https%3A%2F%2Fmcp.appconty.com%2Fmcp">
+      Abre o Claude com tudo preenchido. Clique em **Adicionar** e autorize com a sua conta da Conty.
+    </Card>
+
+    <Frame caption="Instalação do MCP da Conty no Claude">
+      <iframe
+        src="https://platform.twitter.com/embed/Tweet.html?id=2085722802963820996&dnt=true"
+        title="Vídeo: instalação do MCP da Conty no Claude"
+        style={{ width: "100%", maxWidth: "550px", height: "720px", border: "none", margin: "0 auto", display: "block" }}
+        allowFullScreen
+      />
+    </Frame>
+
+    Se o vídeo não carregar, [assista no X](https://x.com/Pedrodv/status/2085722802963820996).
+  </Tab>
+  <Tab title="Claude Code">
+    ```bash
+    claude mcp add --transport http conty https://mcp.appconty.com/mcp
+    ```
+
+    Depois, digite `/mcp`, selecione **conty** e faça o login.
+  </Tab>
+  <Tab title="Cursor">
+    Em `~/.cursor/mcp.json`:
+
+    ```json
+    {
+      "mcpServers": {
+        "conty": { "url": "https://mcp.appconty.com/mcp" }
+      }
+    }
+    ```
+  </Tab>
+  <Tab title="Outros agentes">
+    Adicione um **servidor MCP remoto** (HTTP) com o endereço `https://mcp.appconty.com/mcp`. A autenticação é pelo login da Conty, sem chave de API.
+  </Tab>
+</Tabs>
+
+## O que pedir
+
+- *"Crie uma campanha de UGC para divulgar meu aplicativo de finanças."*
+- *"Encontre creators de beleza no Instagram com até 50 mil seguidores."*
+- *"Liste os vídeos em análise e peça alteração nos que não mostram o produto."*
+- *"Faça um relatório da campanha de lançamento."*
+
+O agente opera só na empresa do seu login e pede confirmação antes de ações de escrita. Para mudar as permissões, desconecte e conecte de novo.
+
+## Complemento: skills
+
+As skills ensinam o agente a executar fluxos completos na Conty — criar campanha, triar candidaturas, revisar entregas, reengajar creators e gerar relatórios — com menos erros e menos instruções suas.
+
+```bash
+npx skills add Conty-App/conty-skills
+```
+
+<Card title="Conty-App/conty-skills" icon="github" href="https://github.com/Conty-App/conty-skills">
+  Veja todas as skills no GitHub.
+</Card>
