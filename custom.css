@@ -332,31 +332,20 @@ html.dark main [class*="prose"] h2,
   letter-spacing: 0.01em !important;
 }
 
-/* Pagination footer links - specific selectors only */
-nav[aria-label*="pagination"] a[rel="prev"] span,
-nav[aria-label*="Pagination"] a[rel="prev"] span,
-nav[aria-label*="pagination"] a[rel="next"] span,
-nav[aria-label*="Pagination"] a[rel="next"] span,
-footer nav a[rel="prev"] span,
-footer nav a[rel="next"] span {
-  visibility: hidden !important;
+#pagination [data-component-part="pagination-label"] {
   font-size: 0 !important;
 }
 
-nav[aria-label*="pagination"] a[rel="prev"]::before,
-nav[aria-label*="Pagination"] a[rel="prev"]::before,
-footer nav a[rel="prev"]::before {
-  content: "Anterior" !important;
-  visibility: visible !important;
-  font-size: 0.875rem !important;
+#pagination [data-component-part="pagination-label"]::after {
+  font-size: 0.875rem;
 }
 
-nav[aria-label*="pagination"] a[rel="next"]::after,
-nav[aria-label*="Pagination"] a[rel="next"]::after,
-footer nav a[rel="next"]::after {
-  content: "Próximo" !important;
-  visibility: visible !important;
-  font-size: 0.875rem !important;
+#pagination a[rel="prev"] [data-component-part="pagination-label"]::after {
+  content: "Anterior";
+}
+
+#pagination a[rel="next"] [data-component-part="pagination-label"]::after {
+  content: "Próximo";
 }
 
 /* ============================================
