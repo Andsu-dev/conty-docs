@@ -15,54 +15,77 @@ import { AsaasFootnote } from "/snippets/asaas-disclaimer.mdx"
 
 Você deposita na Conty e usa essa verba nas campanhas. O criador só recebe depois que você **aprova** o conteúdo.
 
-O saldo **pendente já vale para campanha**. Pix, boleto e cartão entram no orçamento assim que o pagamento confirma — mesmo antes da liquidação bancária.
+Para depositar, a marca precisa de um [plano ativo](/marcas/planos). O saldo fica disponível quando o pagamento é confirmado: Pix na hora; boleto e cartão em até **1 dia útil**.
 
-<Frame caption="Carteira da marca">
-  <img
-    src="/images/pagamentos/carteira-marca.jpg"
-    alt="Tela de Cobrança no dashboard da marca: saldo total, saldo livre, saldo em campanhas e visão geral da carteira."
-  />
+<Frame caption="Tela de Pagamentos">
+  <video autoPlay muted loop playsInline src="/images/marcas/videos/pagamentos-carteira.mp4" />
 </Frame>
 
 ## Adicionar saldo
 
-1. Entre em [appconty.com](https://appconty.com).
-2. Abra **Cobrança** ou **Carteira**.
-3. Informe o valor e escolha Pix, boleto ou cartão.
-4. O depósito aparece no extrato.
+<Steps>
+  <Step title="Abra o card de saldo">
+    No dashboard, vá até o **canto inferior esquerdo** da tela. Ali fica o card com o seu **saldo** e o **saldo livre**.
 
-| Método | Confirmação | Liquidação | Já usa em campanha? |
-| --- | --- | --- | --- |
-| Pix | Segundos | Imediata | Sim |
-| Boleto | Na hora do pagamento | Cerca de 1 dia útil | Sim |
-| Cartão (1x) | Na hora | Cerca de 30 dias | Sim |
+    <Frame caption="Card de saldo e tela de Pagamentos">
+      <video autoPlay muted loop playsInline src="/images/marcas/videos/saldo-pagamentos.mp4" />
+    </Frame>
+  </Step>
+  <Step title="Clique em Gerenciar">
+    No card de saldo, clique em **Gerenciar**.
+  </Step>
+  <Step title="Clique em Depositar">
+    Clique em **Depositar** para abrir a tela de depósito.
 
-A taxa incide no valor bruto e cai conforme o depósito aumenta.
+    <Note>
+      Para depositar, a marca precisa ter um plano ativo. Sem plano, a plataforma mostra o aviso **Assine um plano para depositar**, e um administrador da marca precisa escolher um [plano](/marcas/planos).
+    </Note>
+  </Step>
+  <Step title="Preencha as etapas do depósito">
+    A tela **Depositar na carteira** tem três etapas: **Informações**, **Endereço** e **Pagamento**. Em Informações, você preenche **CPF ou CNPJ**, **nome ou razão social**, **e-mail** e **telefone**.
 
-| Valor do depósito | Taxa |
+    Ao lado, o **Resumo** mostra o depósito na carteira, a taxa do seu plano e o valor que entra no saldo.
+
+    <Frame caption="Tela de depósito">
+      <img
+        src="/images/marcas/tela-deposito-v2.jpg"
+        alt="Tela Depositar na carteira com as etapas Informações, Endereço e Pagamento e o resumo com a taxa do plano."
+      />
+    </Frame>
+  </Step>
+  <Step title="Confirme o pagamento">
+    Na etapa **Pagamento**, conclua o depósito por Pix, boleto ou cartão. Depois da confirmação, o depósito aparece no extrato.
+  </Step>
+</Steps>
+
+| Método | Quando cai na carteira |
 | --- | --- |
-| R$ 500 a R$ 9.999,99 | 15% |
-| R$ 10.000 a R$ 24.999,99 | 12,5% |
-| R$ 25.000 a R$ 49.999,99 | 10% |
-| R$ 50.000 a R$ 99.999,99 | 7,5% |
-| R$ 100.000 ou mais | 6,5% |
+| Pix | Na hora |
+| Boleto | Até 1 dia útil |
+| Cartão (1x) | Até 1 dia útil |
 
-<Frame caption="Depósito e taxa">
-  <img
-    src="/images/pagamentos/drawer-adicionar-saldo.jpg"
-    alt="Drawer de adicionar saldo: Pix, boleto ou cartão, valor do depósito e resumo da taxa."
-  />
-</Frame>
+O depósito é **único, sem recorrência**, e é processado pelo **Asaas**.
+
+O valor mínimo de depósito é **R\$ 150**.
+
+A taxa na adição de saldo depende do seu [plano](/marcas/planos) e **já sai do valor depositado**. O resumo da tela de depósito mostra a taxa do seu plano.
+
+| Plano | Taxa na adição de saldo |
+| --- | --- |
+| Starter | 6,9% |
+| Growth | 5,9% |
+| Scale | 4,9% |
+| Enterprise | Negociada |
 
 ## Como a campanha gasta
 
-O orçamento sai do **valor reservado**, não do saldo livre. O que sobrar ao encerrar volta para o livre.
+O orçamento sai do **valor reservado**, não do saldo livre. O que sobrar ao encerrar volta para o saldo livre. Esse saldo pode ser usado para criar outra campanha, desde que cubra o valor necessário para ativá-la.
 
 Você só gasta na **aprovação**. Recusar não consome. Pedir alteração mantém a reserva até a decisão.
 
 Campanha de **permuta** não usa reais. Descreva o item no briefing.
 
-Reembolso: até **7 dias corridos** após o primeiro depósito, com as campanhas pausadas. Detalhe em [reembolso](/help-center/rules/reembolso).
+Estorno: o estorno de saldo excedente deve ser solicitado diretamente ao [suporte](/help-center/contact). A mensalidade do plano só pode ser reembolsada em até **7 dias corridos** contados do primeiro depósito, com as campanhas pausadas ([política de reembolso](/help-center/rules/reembolso)). Valores já vinculados a uma campanha **não podem ser removidos**, porque são o pagamento dos criadores ativos nela.
 
 O extrato, os prazos de liquidação e as dúvidas de cobrança estão em [Pagamentos para marcas](/pagamentos/marcas).
 
@@ -71,12 +94,17 @@ O extrato, os prazos de liquidação e as dúvidas de cobrança estão em [Pagam
 ## Próximo passo
 
 <div className="conty-option-cards">
-<CardGroup cols={2}>
-  <Card title="Campanhas" icon="/icons/megaphone01.svg" href="/marcas/campanhas">
-    Publique com a verba já na conta.
-  </Card>
-  <Card title="Pagamentos" icon="/icons/creditCard.svg" href="/pagamentos/marcas">
-    Extrato, liquidação e perguntas frequentes.
-  </Card>
-</CardGroup>
+  <CardGroup cols={2}>
+    <Card title="Campanhas" icon="/icons/megaphone01.svg" href="/marcas/campanhas">
+      Publique com a verba já na conta.
+    </Card>
+
+    <Card title="Pagamentos" icon="/icons/creditCard.svg" href="/pagamentos/marcas">
+      Extrato, liquidação e perguntas frequentes.
+    </Card>
+
+    <Card title="Planos" icon="/icons/sparkles.svg" href="/marcas/planos">
+      Limite de creators e taxa de cada plano.
+    </Card>
+  </CardGroup>
 </div>

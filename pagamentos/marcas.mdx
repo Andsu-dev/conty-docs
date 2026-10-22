@@ -3,67 +3,69 @@ title: "Para marcas"
 sidebarTitle: "Marcas"
 description: "Como adicionar saldo, pagar campanhas e acompanhar a verba."
 keywords:
-  - marcas
-  - depósito
-  - verba
-  - taxa
-  - boleto
-  - pix
-  - cartão
-  - views
-  - visualizações
+  - "marcas"
+  - "depósito"
+  - "verba"
+  - "taxa"
+  - "boleto"
+  - "pix"
+  - "cartão"
+  - "views"
+  - "visualizações"
 ---
 
 Você adiciona saldo na Conty e usa essa verba nas campanhas. O criador só recebe depois que você aprova o conteúdo.
 
-<Frame caption="Tela de carteira da marca">
+<Frame caption="Tela de Pagamentos da marca">
   <img
-    src="/images/pagamentos/carteira-marca.jpg"
-    alt="Tela de Cobrança no dashboard da marca: saldo total, saldo livre, saldo em campanhas e visão geral da carteira."
+    src="/images/pagamentos/pagamentos-marca.jpg"
+    alt="Tela de Pagamentos no dashboard da marca: saldo total, saldo livre, em campanhas, total depositado, total gasto e abas Extrato e Pagamentos."
   />
 </Frame>
 
 ## Adicionar saldo
 
-1. Entre em [appconty.com](https://appconty.com).
-2. Abra **Cobrança** ou **Carteira**.
-3. Informe o valor e escolha Pix, boleto ou cartão de crédito.
-4. Depois da confirmação, o depósito aparece no extrato.
+<Info>
+  Para depositar, a marca precisa de um [plano ativo](/marcas/planos). Quem assina e gerencia o plano e a conta é o **administrador da marca**.
+</Info>
 
-<Frame caption="Drawer de adicionar saldo">
+1. Entre no dashboard em [appconty.com](https://appconty.com).
+2. No card de saldo, no canto inferior esquerdo, clique em **Gerenciar**.
+3. Clique em **Depositar**.
+4. Siga as etapas **Informações** (CPF ou CNPJ, nome ou razão social, e-mail e telefone), **Endereço** e **Pagamento**, e conclua por Pix, boleto ou cartão de crédito.
+5. Depois da confirmação, o depósito aparece no extrato.
+
+<Frame caption="Tela de depósito">
   <img
-    src="/images/pagamentos/drawer-adicionar-saldo.jpg"
-    alt="Drawer de adicionar saldo: Pix, boleto ou cartão, valor do depósito e resumo da taxa."
+    src="/images/marcas/tela-deposito-v2.jpg"
+    alt="Tela Depositar na carteira com as etapas Informações, Endereço e Pagamento e o resumo com a taxa do plano."
   />
 </Frame>
 
-| Método | Confirmação | Liquidação | Já usa em campanha? |
-| --- | --- | --- | --- |
-| Pix | Segundos | Imediata | Sim |
-| Boleto | Na hora do pagamento | Cerca de 1 dia útil | Sim |
-| Cartão (1x) | Na hora | Cerca de 30 dias | Sim |
+| Método | Quando cai na carteira |
+| --- | --- |
+| Pix | Na hora |
+| Boleto | Até 1 dia útil |
+| Cartão (1x) | Até 1 dia útil |
 
-No boleto, a tela mostra **Pagamento confirmado** assim que o pagamento entra. O saldo fica pendente até a liquidação bancária. A linha digitável permanece visível para copiar.
+O depósito é **único, sem recorrência**, e é processado pelo **Asaas**. O depósito mínimo é de **R\$ 150**.
 
-<Tip>
-  Pix e cartão confirmam na hora. Boleto também confirma no pagamento, mas a liquidação é no dia útil seguinte.
-</Tip>
+No boleto, a linha digitável fica visível para copiar.
 
 ## Taxa da Conty no depósito
 
-A taxa incide sobre o valor bruto e diminui conforme o depósito aumenta.
+A taxa é a do seu [plano](/marcas/planos) e **já sai do valor depositado**. O resumo da tela de depósito mostra o depósito, a taxa do seu plano e o valor que entra no saldo.
 
-| Valor do depósito | Taxa |
+| Plano | Taxa na adição de saldo |
 | --- | --- |
-| {'R$ 500 a R$ 9.999,99'} | 15% |
-| {'R$ 10.000 a R$ 24.999,99'} | 12,5% |
-| {'R$ 25.000 a R$ 49.999,99'} | 10% |
-| {'R$ 50.000 a R$ 99.999,99'} | 7,5% |
-| {'R$ 100.000 ou mais'} | 6,5% |
+| Starter | 6,9% |
+| Growth | 5,9% |
+| Scale | 4,9% |
+| Enterprise | Negociada |
 
 ## Como a campanha usa o saldo
 
-O orçamento da campanha sai do **valor reservado**, não do saldo livre da conta. O que sobrar ao encerrar a campanha volta para o saldo livre.
+O orçamento da campanha sai do **valor reservado**, não do saldo livre da conta. O que sobrar ao encerrar a campanha volta para o saldo livre. Esse saldo pode ser usado para criar outra campanha, desde que cubra o valor necessário para ativá-la.
 
 Você só gasta na **aprovação** do conteúdo. Recusar um vídeo não consome verba.
 
@@ -71,25 +73,20 @@ Campanha de **permuta**: descreva o item (por exemplo, um kit de produtos). O cr
 
 Campanha **por views**: você paga as visualizações **validadas** pela Conty, não o número bruto da rede social. O sistema próprio de detecção de fraude analisa sinais como Reels de teste, volume alto com quase nenhuma interação e métricas inconsistentes com tráfego orgânico. Isso não significa automaticamente que o criador fez algo errado — é a camada de segurança da campanha. Detalhes em [Campanhas por views](/pagamentos#campanhas-por-views).
 
-<Frame caption="Formato de pagamento da campanha, incluindo permuta">
+O formato de pagamento é escolhido na etapa **Configurações financeiras** da nova campanha: **Por conteúdo**, **Permuta** ou **Por visualização**.
+
+<Frame caption="Configurações financeiras, com permuta">
   <img
-    src="/images/pagamentos/formato-pagamento-permuta.jpg"
-    alt="Etapa de budget da nova campanha: pagar por conteúdo, por view, comissão ou permuta."
+    src="/images/pagamentos/config-financeiras-permuta-v2.jpg"
+    alt="Etapa Configurações financeiras da nova campanha com o formato Permuta selecionado, nome do produto, detalhes e envio de produto."
   />
 </Frame>
 
 ## Extrato
 
-A aba de transações junta depósitos e movimentações de campanha. Depósito pago, ainda em liquidação, também aparece — não some da lista.
-
-<Frame caption="Lista de transações">
-  <img
-    src="/images/pagamentos/extrato-marca.jpg"
-    alt="Aba Transações em Cobrança: histórico de depósitos, taxas e movimentações da carteira da marca."
-  />
-</Frame>
+A aba de transações junta depósitos e movimentações de campanha. Depósitos com pagamento confirmado aparecem na lista.
 
 ## Reembolso
 
-O pedido segue o [Código de Defesa do Consumidor](/help-center/rules/reembolso): até **7 dias corridos** após o primeiro depósito, com todas as campanhas pausadas e as entregas pendentes avaliadas.
-
+- **Mensalidade do plano:** reembolso somente se o pedido for feito em até **7 dias corridos** contados do primeiro depósito, com as campanhas pausadas ([Código de Defesa do Consumidor](/help-center/rules/reembolso)).
+- **Saldo excedente:** o estorno deve ser solicitado diretamente ao [suporte](/help-center/contact).
