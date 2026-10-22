@@ -401,6 +401,12 @@
             "pages": [
               "criadores/conty-bio"
             ]
+          },
+          {
+            "group": "Ferramentas",
+            "pages": [
+              "criadores/conty-bio"
+            ]
           }
         ]
       },
@@ -419,6 +425,22 @@
             "pages": [
               "pagamentos/marcas",
               "pagamentos/criadores"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Agências",
+        "groups": [
+          {
+            "group": "Agências",
+            "pages": [
+              "agencias/index",
+              "agencias/cadastro",
+              "agencias/comissoes",
+              "agencias/pagamentos",
+              "agencias/suporte",
+              "agencias/comunidade"
             ]
           }
         ]
