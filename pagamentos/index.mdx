@@ -11,8 +11,6 @@ keywords:
   - validação
 ---
 
-import { AsaasFootnote } from "/snippets/asaas-disclaimer.mdx"
-
 A Conty usa uma carteira pré-paga. A marca adiciona saldo, a campanha reserva esse valor e o criador recebe depois da aprovação do conteúdo. O saque é via Pix.
 
 <div className="conty-option-cards">
@@ -30,50 +28,56 @@ A Conty usa uma carteira pré-paga. A marca adiciona saldo, a campanha reserva e
 
 <Steps>
   <Step title="A marca adiciona saldo">
-    Pix, boleto ou cartão de crédito. O depósito confirmado já pode ser usado em campanha.
+    É preciso ter um [plano](/marcas/planos) ativo. O depósito mínimo é de R\$ 150, por Pix, boleto ou cartão de crédito. Pix cai na hora; boleto e cartão levam até 1 dia útil. A taxa é a do plano e já sai do valor depositado.
   </Step>
   <Step title="A campanha reserva o valor">
-    O orçamento fica separado para aquela campanha. O criador só é pago com essa reserva.
+    A campanha só pode ser criada se o saldo **disponível** cobrir os custos da campanha e dos conteúdos. Assim que ela é criada, o valor fica reservado para ela.
   </Step>
   <Step title="O conteúdo é aprovado">
     Sem aprovação final, não há pagamento. Recusar um vídeo não gera custo.
   </Step>
   <Step title="O criador recebe e saca">
-    O valor entra na carteira. Quando estiver disponível, o saque cai via Pix.
+    O valor entra na carteira do criador já com a taxa descontada e fica disponível para saque **30 dias** depois da aprovação do conteúdo, na chave Pix cadastrada.
   </Step>
 </Steps>
 
-<Frame caption="Fluxo marca → campanha → criador">
-  <img
-    src="/images/pagamentos/fluxo-marca-campanha-criador.jpg"
-    alt="Como o dinheiro se move: a marca adiciona saldo, a campanha reserva o valor, o conteúdo é aprovado e o criador recebe e saca via Pix."
-  />
-</Frame>
-
 ## Saldo pendente e saldo disponível
-
-Confirmado não é o mesmo que liquidado.
 
 | Quem | Pendente | Disponível |
 | --- | --- | --- |
-| Marca | Já dá para criar campanha e pagar criadores | Dinheiro já liquidado |
-| Criador | Valor a caminho. Ainda não dá para sacar | Pode sacar via Pix |
+| Marca | Depósito com pagamento ainda não confirmado | Pagamento confirmado (Pix na hora; boleto e cartão em até 1 dia útil). Pode ser usado para criar campanhas |
+| Criador | Valor aprovado aguardando os 30 dias. Ainda não dá para sacar | Pode sacar via Pix |
 
-O prazo de liquidação depende do método de depósito da marca: Pix é imediato, boleto leva cerca de 1 dia útil, cartão cerca de 30 dias. Enquanto isso, o criador vê o valor como pendente.
+Para o criador, o valor fica disponível para saque **30 dias** depois da aprovação, independente do método de pagamento da marca. Em alguns casos, pode levar mais de 30 dias: o prazo exato está sempre escrito na campanha.
 
 ## Formatos de pagamento da campanha
 
-- **Valor fixo** — a marca define quanto paga por conteúdo aprovado.
-- **Por views** — o valor depende das visualizações **validadas** da campanha.
-- **Permuta** — não há pagamento em dinheiro. A marca descreve o item; o criador vê **PERMUTA**.
+- **Valor fixo:** a marca define quanto paga por conteúdo aprovado.
+- **Por views:** o valor depende das visualizações **validadas** do conteúdo.
+- **Fixo + por views:** um valor fixo mais um adicional por visualização.
+- **Permuta:** não há pagamento em dinheiro. A marca descreve o item e o criador vê **PERMUTA**.
 
-A taxa da plataforma para o criador é de **5%** sobre cada valor aprovado. Campanhas de permuta não geram saque.
+A taxa da plataforma para o criador é de **5%**, descontada quando a campanha é concluída: o valor já entra na carteira líquido. Não há taxa no saque. Campanhas de permuta não têm desconto nem saque.
 
 <Info>
-  A aprovação da candidatura só libera a produção. O pagamento acontece na aprovação final da entrega. Veja [Pagamento condicional](/help-center/rules/conditional-payment).
+  A aprovação da candidatura só libera a produção. O pagamento acontece na aprovação final da entrega.
 </Info>
 
 ## Campanhas por views
+
+<Steps>
+  <Step title="O conteúdo é publicado e aprovado">
+    O criador publica e a marca aprova.
+  </Step>
+  <Step title="7 dias de contagem">
+    O sistema leva 7 dias para contabilizar as visualizações e definir o valor que será repassado ao criador.
+  </Step>
+  <Step title="30 dias para liberar">
+    Depois que o valor é definido, ele leva 30 dias para ficar disponível para saque.
+  </Step>
+</Steps>
+
+### Validação de views
 
 O pagamento por views usa as visualizações do conteúdo publicado na campanha. A Conty tem um sistema próprio de detecção de fraude e validação dessas views: ele analisa diferentes sinais para identificar quando as visualizações não conseguem ser validadas de forma confiável. Só entram no pagamento as views que passam nessa validação.
 
@@ -92,20 +96,21 @@ Isso **não** significa automaticamente que o criador fez algo errado. É uma ca
 ## Próximo passo
 
 <div className="conty-option-cards">
-<CardGroup cols={2}>
-  <Card title="Marcas" href="/pagamentos/marcas" icon="/icons/creditCard.svg">
-    Depósito, taxas e extrato.
-  </Card>
-  <Card title="Criadores" href="/pagamentos/criadores" icon="/icons/wallet01.svg">
-    Cadastro facial, Pix e saque.
-  </Card>
-  <Card title="Perguntas frequentes" href="/pagamentos/perguntas-frequentes" icon="/icons/helpCircle.svg">
-    Prazos, taxas e problemas comuns.
-  </Card>
-  <Card title="Suporte" href="/help-center/contact" icon="/icons/customerService01.svg">
-    Fale com o time se o saldo não bater.
-  </Card>
-</CardGroup>
-</div>
+  <CardGroup cols={2}>
+    <Card title="Marcas" href="/pagamentos/marcas" icon="/icons/creditCard.svg">
+      Depósito, taxas e extrato.
+    </Card>
 
-<AsaasFootnote />
+    <Card title="Criadores" href="/pagamentos/criadores" icon="/icons/wallet01.svg">
+      Cadastro, Pix e saque.
+    </Card>
+
+    <Card title="Perguntas frequentes" href="/pagamentos/perguntas-frequentes" icon="/icons/helpCircle.svg">
+      Prazos, taxas e problemas comuns.
+    </Card>
+
+    <Card title="Suporte" href="/help-center/contact" icon="/icons/customerService01.svg">
+      Fale com o time se o saldo não bater.
+    </Card>
+  </CardGroup>
+</div>

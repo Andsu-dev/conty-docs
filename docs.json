@@ -360,6 +360,7 @@
                 "group": "Primeiros passos",
                 "pages": [
                   "marcas/comecar",
+                  "marcas/planos",
                   "marcas/campanhas",
                   "marcas/verba"
                 ]
@@ -395,15 +396,26 @@
                 "pages": [
                   "criadores/baixar-o-app",
                   "criadores/candidaturas",
-                  "criadores/carteira"
+                  "criadores/carteira",
+                  "criadores/como-voce-recebe",
+                  "criadores/direitos-de-uso",
+                  "criadores/strikes",
+                  "criadores/boas-praticas"
                 ]
               },
               {
                 "group": "Formas de ganhar",
                 "pages": [
+                  "criadores/escopos-e-pagamentos",
                   "criadores/ugc",
                   "criadores/influencia",
                   "criadores/clipping"
+                ]
+              },
+              {
+                "group": "Ferramentas",
+                "pages": [
+                  "criadores/conty-bio"
                 ]
               }
             ]
@@ -423,6 +435,22 @@
                 "pages": [
                   "pagamentos/marcas",
                   "pagamentos/criadores"
+                ]
+              }
+            ]
+          },
+          {
+            "tab": "Agências",
+            "groups": [
+              {
+                "group": "Agências",
+                "pages": [
+                  "agencias/index",
+                  "agencias/cadastro",
+                  "agencias/comissoes",
+                  "agencias/pagamentos",
+                  "agencias/suporte",
+                  "agencias/comunidade"
                 ]
               }
             ]
@@ -713,15 +741,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
@@ -732,4 +760,3 @@
     }
   }
 }
-

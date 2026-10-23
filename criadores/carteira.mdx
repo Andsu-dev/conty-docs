@@ -1,27 +1,29 @@
 ---
 title: "Configurar a carteira"
 sidebarTitle: "Carteira"
-description: "Cadastro facial, chave Pix e como o valor entra para saque."
+description: "Cadastro facial, chave Pix, prazos de liberação e saque."
 keywords:
-  - carteira
-  - pix
-  - saque
-  - cadastro facial
-  - kyc
+  - "carteira"
+  - "pix"
+  - "saque"
+  - "cadastro facial"
+  - "kyc"
 ---
-
-import { AsaasFootnote } from "/snippets/asaas-disclaimer.mdx"
 
 A carteira fica no app. Com ela você recebe o valor das campanhas aprovadas e saca via Pix.
 
+<Warning>
+  A carteira precisa estar **cadastrada e aprovada** para você usar o app. Antes disso, você consegue navegar e ver campanhas, mas não consegue se candidatar nem interagir. Se o cadastro for recusado, a conta continua sem acesso.
+</Warning>
+
 <Note>
-  Para configurar a carteira e sacar, é necessário ter **18 anos ou mais**.
+  Para configurar a carteira, é necessário ter **18 anos ou mais**.
 </Note>
 
 <Frame caption="Carteira no app">
   <img
-    src="/images/criadores/carteira.jpg"
-    alt="Carteira do criador: saldo em conta, disponível, pendente e botões de sacar e extrato."
+    src="/images/criadores/carteira-visao-geral.jpg"
+    alt="Carteira no app com saldo em conta, disponível, processando e botão Sacar, com valores fictícios."
   />
 </Frame>
 
@@ -29,69 +31,89 @@ A carteira fica no app. Com ela você recebe o valor das campanhas aprovadas e s
 
 <Steps>
   <Step title="Abra a carteira">
-    No app, entre em **Carteira**.
+    Na aba **Início**, toque no seu **saldo**.
   </Step>
-  <Step title="Faça o cadastro facial">
-    É a validação de identidade. A análise leva até 48 horas; cadastros de pessoa física costumam ser mais rápidos. Enquanto está em análise, um aviso aparece na Início e na Carteira.
+  <Step title="Envie seus documentos e faça o reconhecimento facial">
+    A validação de identidade pede o envio de documentos e o reconhecimento facial. Todo o processo é conduzido pelo provedor de pagamentos. A análise pode levar **até 60 dias**. Assim que a carteira for aprovada, você recebe uma **notificação no app e por e-mail**.
   </Step>
-  <Step title="Salve sua chave Pix">
-    Pode ser conta PF ou PJ. Sem chave cadastrada, o saque não sai.
+  <Step title="Cadastre sua chave Pix">
+    A chave Pix precisa estar no **CPF ou CNPJ do titular da conta Conty**. Não é possível usar chave de terceiros. É a única forma de retirar o valor da carteira.
+  </Step>
+  <Step title="Cadastre seus dados bancários (opcional)">
+    Você pode cadastrar conta PF, PJ ou as duas.
   </Step>
 </Steps>
 
-<Frame caption="Cadastro facial e chave Pix">
-  <img
-    src="/images/criadores/chaves-pix.jpg"
-    alt="Chaves de saque: chave Pix cadastrada e opção de cadastrar nova chave."
-  />
-</Frame>
-
 <Info>
-  Sem cadastro facial aprovado e sem chave Pix, o valor pode entrar na carteira, mas você não consegue sacar.
+  A aprovação da carteira e de cada conta bancária é feita pelo provedor de pagamentos, e a Conty não tem controle sobre ela. Uma conta pode ser aprovada e a outra não, ou as duas podem ser aprovadas ou recusadas.
 </Info>
+
+<Frame caption="Configurações da carteira no app">
+  <video autoPlay muted loop playsInline src="/images/criadores/videos/app-config-carteira-ficticio-v2.mp4" />
+</Frame>
 
 ## Quando o dinheiro aparece
 
 1. Você entrega o conteúdo.
 2. A marca **aprova**.
-3. O valor entra como **pendente**.
-4. Quando fica **disponível**, você saca via Pix.
+3. O valor entra na carteira como **pendente**, já com a taxa descontada.
+4. **30 dias** depois da aprovação, fica **disponível** e você saca para a sua chave Pix cadastrada.
 
 A candidatura aprovada não paga. Só a aprovação final da entrega.
 
-O saque só libera quando o pagamento da marca já liquidou:
+<Warning>
+  Em alguns casos, o pagamento pode levar **mais de 30 dias**. O prazo exato está sempre escrito na campanha.
+</Warning>
 
-| Como a marca pagou | O que você vê |
+| Situação | Prazo |
 | --- | --- |
-| Pix | Costuma ficar disponível mais rápido |
-| Boleto | Pendente por cerca de 1 dia útil |
-| Cartão | Pendente por cerca de 30 dias |
+| Conteúdo aprovado pela marca | Valor aparece como pendente |
+| Liberação para saque | Em média 30 dias (em alguns casos, um pouco mais) |
+| Campanhas por view | O sistema leva 7 dias depois da aprovação para contabilizar as visualizações e definir o valor. Depois disso, mais 30 dias para liberar o saque |
 
-A taxa da Conty para criadores é de **5%** sobre cada valor aprovado. Em uma campanha de R$ 100, você recebe R$ 95.
+## Taxa
 
-Campanha de **permuta** não gera valor em reais. O item aparece em Sobre a campanha.
+A taxa da Conty para criadores é de **5%** em campanhas pagas, descontada quando a campanha é concluída. O valor já chega na carteira com a taxa descontada, e não há taxa no saque. Em uma campanha de R\$ 100, você recebe R\$ 95.
 
-<Frame caption="Saldo pendente e saque">
-  <img
-    src="/images/criadores/extrato.jpg"
-    alt="Extrato da conta: saque via Pix, repasse de campanha e saldo da carteira antiga."
-  />
+Campanhas de **permuta** (swap) não têm nenhum valor descontado.
+
+## Sacar
+
+<Steps>
+  <Step title="Abra a carteira">
+    Na aba **Início**, toque no seu **saldo**. Lá você também vê o histórico de pagamentos.
+  </Step>
+  <Step title="Saque via Pix">
+    Você pode sacar qualquer valor que esteja disponível para saque.
+  </Step>
+</Steps>
+
+<Frame caption="Carteira e saque via Pix no app">
+  <video autoPlay muted loop playsInline src="/images/criadores/videos/app-carteira-saque-ficticio-v2.mp4" />
 </Frame>
 
 ## Dúvidas comuns
 
 <AccordionGroup>
   <Accordion title="Posso cadastrar conta PJ?">
-    Sim. No sistema novo você pode sacar para a chave Pix da sua empresa. No modelo antigo isso não era possível. Para trocar PJ por PF, fale com o [suporte](/help-center/contact).
+    Sim. Você pode cadastrar conta PF, PJ ou as duas. A chave Pix precisa estar no CPF ou CNPJ do titular da conta Conty.
   </Accordion>
+
+  <Accordion title="Minha carteira está em análise. Quanto tempo demora?">
+    A análise dos documentos pode levar **até 60 dias**. Assim que a carteira for aprovada, você recebe uma notificação no app e por e-mail. Não precisa reenviar nada enquanto isso.
+  </Accordion>
+
+  <Accordion title="Como troco meus dados bancários ou a chave Pix?">
+    A troca é feita pelo suporte. Fale com a gente pelo **chat do app** e informe o **e-mail da sua conta**. A nova chave Pix precisa estar no CPF ou CNPJ do titular da conta Conty: chave de terceiros não é aceita.
+  </Accordion>
+
   <Accordion title="Por que o valor está pendente se a marca já aprovou?">
-    O saque espera a liquidação do depósito da marca. No cartão isso leva cerca de 30 dias; no boleto, cerca de 1 dia útil.
+    Depois da aprovação, o valor fica pendente por cerca de 30 dias antes de ser liberado para saque.
   </Accordion>
-  <Accordion title="Tenho saldo antigo?">
-    Saldo de um modelo anterior aparece como pendente. O saque continua só pelo Pix desta carteira.
+
+  <Accordion title="Meu cadastro foi recusado. E agora?">
+    A aprovação é feita pelo provedor de pagamentos. Enquanto a carteira não estiver aprovada, você não consegue se candidatar nem interagir no app. Fale com o [suporte](/help-center/contact).
   </Accordion>
 </AccordionGroup>
 
-O detalhe de extrato, comprovante e prazos está em [Pagamentos para criadores](/pagamentos/criadores).
-
-<AsaasFootnote />
+O resumo de taxa, prazo e saque está em [Como você recebe](/criadores/como-voce-recebe). O detalhe de extrato, comprovante e prazos está em [Pagamentos para criadores](/pagamentos/criadores).

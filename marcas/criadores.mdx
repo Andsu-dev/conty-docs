@@ -11,49 +11,53 @@ keywords:
   - conty ai
 ---
 
-Você pode esperar candidatura na campanha aberta ou chamar quem já conhece. Os dois caminhos usam a mesma revisão e o mesmo [pagamento condicional](/help-center/rules/conditional-payment).
+Você pode esperar as candidaturas na campanha aberta, convidar quem você já conhece ou usar as sugestões que a própria Conty faz para a sua campanha.
 
 <div className="conty-option-cards">
-<CardGroup cols={3}>
-  <Card title="Busca" icon="/icons/search01.svg">
-    Linguagem natural e filtros. A lista carrega conforme você rola.
-  </Card>
-  <Card title="Convite em lote" icon="/icons/userSearch01.svg">
-    Selecione vários perfis e envie de uma vez.
-  </Card>
-  <Card title="Conty AI" icon="/icons/sparkles.svg">
-    Monta campanha, convida e sugere aprovação de candidatura.
-  </Card>
-</CardGroup>
+  <CardGroup cols={2}>
+    <Card title="Busca e filtros" icon="/icons/search01.svg">
+      Linguagem natural e filtros por categorias e características dos criadores.
+    </Card>
+
+    <Card title="Sugestões da Conty" icon="/icons/sparkles.svg">
+      Criadores mais qualificados para o seu briefing.
+    </Card>
+
+    <Card title="Convite em lote" icon="/icons/userSearch01.svg">
+      Selecione vários perfis e envie de uma vez.
+    </Card>
+
+    <Card title="Copilot" icon="/icons/sparkles.svg">
+      A IA da Conty monta campanha, convida e sugere aprovações.
+    </Card>
+  </CardGroup>
 </div>
 
-<Frame caption="Lista de criadores">
-  <img
-    src="/images/marcas/busca-criadores.jpg"
-    alt="Tela de criadores no dashboard: busca, listas, filtros e grade de perfis."
-  />
+## Buscar criadores
+
+Na área de **Criadores**, descreva o que você precisa em linguagem natural, por exemplo: “criadores de tech em São Paulo que falam de produtividade”. A busca entende o texto e mostra perfis compatíveis.
+
+Depois, refine com os **filtros**. Eles estão ainda mais completos: você pode combinar várias categorias e características dos criadores até chegar exatamente no perfil que a sua marca procura.
+
+<Frame caption="Como buscar e filtrar criadores">
+  <video autoPlay muted loop playsInline src="/images/marcas/videos/buscar-criadores.mp4" />
 </Frame>
-
-## Buscar
-
-Na área de **Criadores**, descreva o que você precisa em linguagem natural — por exemplo, “criadores de tech em São Paulo que falam de produtividade”. A busca entende o texto e devolve perfis compatíveis.
-
-Refine com filtros (nicho, localização, rede, tipo de conteúdo). A lista carrega conforme você rola.
 
 Salve nos **favoritos** quem você quer chamar depois.
 
+## Sugestões de criadores qualificados
+
+A própria plataforma sugere os **criadores mais qualificados** para a sua campanha, com base no briefing e nos detalhes da marca. É um atalho para encontrar bons perfis sem precisar montar a busca do zero.
+
 <Frame caption="Perfil do criador">
-  <img
-    src="/images/marcas/detalhe-criador.jpg"
-    alt="Perfil do criador no dashboard: dados, redes, métricas e botão de convidar."
-  />
+  <video autoPlay muted loop playsInline src="/images/marcas/videos/perfil-criador.mp4" />
 </Frame>
 
-## Convidar
+## Convidar criadores
 
 <Steps>
   <Step title="Abra Criadores">
-    No menu do dashboard, ou peça para a **Conty AI** listar e convidar.
+    No menu do dashboard, ou peça para o **Copilot** listar e convidar.
   </Step>
   <Step title="Selecione os perfis">
     Um ou vários. Dá para convidar em lote.
@@ -62,59 +66,64 @@ Salve nos **favoritos** quem você quer chamar depois.
     O valor do convite pode ser diferente para cada pessoa, dentro do que a campanha permite.
   </Step>
   <Step title="Envie">
-    O criador recebe no app, em **Novas**, e aceita ou recusa.
+    O criador recebe o convite no app, na aba **Propostas**, e aceita ou recusa.
   </Step>
 </Steps>
 
-<Tip>
-  Convite em lote acelera campanha que precisa de volume. Para um nome específico, use [campanha privada](/marcas/campanhas).
-</Tip>
+<Info>
+  O criador só conta como **creator ativo** no seu [plano](/marcas/planos) quando aceita o convite e entra na campanha. Convites enviados ou pendentes não contam.
+</Info>
 
-## Conty AI
+## Copilot
 
-A Conty AI fica no menu lateral. Ela consegue:
+O **Copilot** é a IA da Conty e fica no menu lateral. Ele consegue:
 
 - Montar o rascunho de uma campanha
 - Convidar vários criadores de uma vez
 - Sugerir aprovação de candidaturas
 
-Quando a AI for aprovar alguém, a tela pede confirmação. Marque **Permitir sempre** se quiser pular essa confirmação nas próximas.
+Quando o Copilot for aprovar alguém, a tela pede confirmação. Marque **Permitir sempre** se quiser pular essa confirmação nas próximas.
 
-Revise o que a AI fizer. Ela acelera o operacional; a decisão da marca continua sendo sua.
+Revise o que o Copilot fizer. Ele acelera o operacional, mas a decisão continua sendo da marca.
 
-<Frame caption="Conty AI">
-  <img
-    src="/images/marcas/conty-ai-criadores.jpg"
-    alt="Conty AI no dashboard de criadores: busca por nicho em linguagem natural ao lado da grade de perfis."
-  />
+<Frame caption="Buscar criadores com o Copilot">
+  <video autoPlay muted loop playsInline src="/images/marcas/videos/copilot.mp4" />
 </Frame>
 
 ## Candidaturas abertas
 
-Na campanha pública, os criadores se inscrevem sozinhos. Você vê o perfil e aprova ou recusa.
+Na campanha pública, os criadores se candidatam sozinhos. Você vê o perfil e aprova ou recusa.
 
-- Candidatura sem resposta **expira em 45 dias**
-- Aprovar a pessoa só libera a produção
-- Sem fit com o briefing, recuse — volume sem critério aumenta retrabalho
+- Candidatura sem resposta **expira em 10 dias**
+- Aprovar a candidatura libera a produção
+- Sem fit com o briefing, recuse: volume sem critério aumenta o retrabalho
 
-<Frame caption="Interessados na campanha">
-  <img
-    src="/images/marcas/detalhe-campanha.jpg"
-    alt="Detalhe da campanha: aba Interessados, criadores pendentes e ações de convidar ou recusar."
-  />
-</Frame>
+## Remover um criador da campanha
+
+Você pode remover um criador da campanha **desde que ele não esteja na aba Fazendo**. Depois que o criador começa a produzir, não é mais possível removê-lo.
+
+Remover um criador libera uma vaga no limite de creators ativos do seu plano.
 
 ## Dúvidas comuns
 
 <AccordionGroup>
   <Accordion title="O criador recusou o convite. Perco a verba?">
-    Não. Convite recusado ou ignorado não consome aprovação. O valor só sai quando você aprova a entrega.
+    Não. Convite recusado ou ignorado não consome verba. O valor só sai quando você aprova a entrega.
   </Accordion>
   <Accordion title="Posso negociar o valor com o criador?">
-    O valor da campanha é o teto. Você pode oferecer valores diferentes por convite, mas o criador não negocia no app.
+    Normalmente não há negociação. A marca define o valor e o criador aceita ou recusa.
   </Accordion>
-  <Accordion title="Consigo falar com alguém antes da campanha?">
-    O chat da entrega abre com a campanha ativa. Comunidade é o outro canal para conversa contínua com o grupo.
+  <Accordion title="Quando o criador passa a contar no limite do plano?">
+    Só quando ele aceita o convite e entra na campanha.
+  </Accordion>
+  <Accordion title="Atingi o limite de creators ativos. E agora?">
+    Remova um criador que ainda não esteja na aba Fazendo ou contrate um [plano maior](/marcas/planos).
+  </Accordion>
+  <Accordion title="Onde o criador vê o meu convite?">
+    No app, na aba **Propostas**.
+  </Accordion>
+  <Accordion title="Consigo falar com o criador antes da campanha?">
+    O chat da entrega abre com a campanha ativa. A comunidade é o outro canal para conversar com o grupo.
   </Accordion>
 </AccordionGroup>
 
