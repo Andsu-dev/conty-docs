@@ -198,6 +198,29 @@ Cada creator aprovado na campanha ganha um cupom próprio. O creator divulga o c
   </Step>
 </Steps>
 
+## Pagamento da comissão
+
+Com taxa maior que zero, a marca separa uma verba de comissão na campanha, no painel da Conty, e a Conty paga o creator com ela. A sua integração não paga nada: ela registra as vendas e os estornos, e acompanha o pagamento pelos campos da venda.
+
+- Cada venda confirmada reserva a comissão na verba e é paga ao creator **7 dias depois da venda**. O creator pode sacar **30 dias depois do pagamento**.
+- `commission_status` diz onde a comissão está (`reserved`, `paid`, `awaiting_budget` e os demais estados da [referência](/api/referencia/cupons#pagamento-da-comissão)), com `commission_due_on`, `commission_paid_at` e `commission_reversed_at`.
+- Nos `totals` do cupom, `commission_reserved_cents`, `commission_paid_cents` e `commission_awaiting_cents` somam a comissão reservada, paga e aguardando verba.
+- Venda com `occurred_at` depois do fim da campanha não tem comissão (`after_campaign_end`). Mande a data real da venda, não a data do envio.
+
+### Reembolso
+
+O reembolso é o mesmo `PUT` da venda com `"status": "canceled"`. O que acontece com a comissão depende de quando ele chega:
+
+| Quando o reembolso chega | Comissão |
+|---|---|
+| Até o 7º dia, antes do pagamento | Sai e volta para a verba (`released`) |
+| Do pagamento até o 37º dia | É estornada do creator (`reversed`) |
+| Depois do 37º dia | Fica com o creator; a venda segue `paid` |
+
+<Note>
+  Informe o reembolso assim que ele acontecer na sua loja. Depois que o creator pode sacar, a Conty não estorna mais a comissão.
+</Note>
+
 ## Cupons disponíveis
 
 Se os códigos já existem na sua loja, você não precisa criar um por creator na hora da aprovação. Cadastre os códigos como cupons disponíveis da campanha e vincule um a cada creator aprovado. O resto do fluxo (vendas, comissão, cancelamento) é o mesmo.

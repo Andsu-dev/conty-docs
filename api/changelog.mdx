@@ -10,6 +10,16 @@ keywords:
 
 Toda mudança no contrato da API aparece aqui antes de entrar no ar. Enquanto a API estiver em beta, mudanças que quebram compatibilidade são possíveis, sempre anunciadas nesta página com o que muda e o que fazer.
 
+<Update label="0.2.0-beta" description="22 de outubro de 2026">
+  Pagamento da comissão do cupom.
+
+  **API**
+  - `CouponSale` traz `commission_status` (`none`, `reserved`, `awaiting_budget`, `no_commission`, `after_campaign_end`, `released`, `paid`, `reversed`), `commission_due_on`, `commission_paid_at` e `commission_reversed_at`.
+  - `Coupon.totals` traz `commission_reserved_cents`, `commission_paid_cents` e `commission_awaiting_cents`.
+  - A Conty paga a comissão 7 dias depois da venda, com a verba que a marca separa na campanha; o creator saca 30 dias depois do pagamento. Reembolso pelo `PUT` com `canceled`: até o 7º dia a comissão sai, até o 37º é estornada, depois fica com o creator. Ver [Pagamento da comissão](/api/referencia/cupons#pagamento-da-comissão).
+  - Campos aditivos: nada muda para quem já integra.
+</Update>
+
 <Update label="0.1.0-beta" description="21 de outubro de 2026">
   Primeira versão pública, em beta.
 

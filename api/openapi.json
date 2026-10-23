@@ -332,12 +332,30 @@
             ],
             "description": "Soma da comissão das vendas confirmadas, em centavos. Nulo quando nenhuma venda tem taxa.",
             "example": 11250
+          },
+          "commission_reserved_cents": {
+            "type": "integer",
+            "description": "Comissão das vendas reservada na verba e ainda não paga, em centavos.",
+            "example": 4000
+          },
+          "commission_paid_cents": {
+            "type": "integer",
+            "description": "Comissão já paga ao creator, em centavos.",
+            "example": 6000
+          },
+          "commission_awaiting_cents": {
+            "type": "integer",
+            "description": "Comissão das vendas que aguardam verba da marca, em centavos.",
+            "example": 1250
           }
         },
         "required": [
           "sales_count",
           "revenue_cents",
-          "commission_cents"
+          "commission_cents",
+          "commission_reserved_cents",
+          "commission_paid_cents",
+          "commission_awaiting_cents"
         ]
       },
       "CreateCouponBody": {
@@ -505,6 +523,36 @@
             "description": "Comissão da venda, em centavos. Nula quando não há taxa.",
             "example": 3750
           },
+          "commission_status": {
+            "$ref": "#/components/schemas/CouponCommissionStatus"
+          },
+          "commission_due_on": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date",
+            "description": "Prazo da comissão: dia do pagamento quando reservada, ou o último dia para a marca adicionar verba quando aguarda verba. Nulo nos demais estados.",
+            "example": "2026-11-17"
+          },
+          "commission_paid_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time",
+            "description": "Quando a comissão foi paga ao creator.",
+            "example": null
+          },
+          "commission_reversed_at": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time",
+            "description": "Quando a comissão paga foi estornada pelo cancelamento da venda.",
+            "example": null
+          },
           "occurred_at": {
             "type": "string",
             "format": "date-time",
@@ -533,6 +581,10 @@
           "mission_id",
           "commission_rate_bps",
           "commission_cents",
+          "commission_status",
+          "commission_due_on",
+          "commission_paid_at",
+          "commission_reversed_at",
           "occurred_at",
           "created_at",
           "updated_at"
@@ -546,6 +598,21 @@
         ],
         "description": "Situação da venda. Só venda confirmada entra nos totais.",
         "example": "confirmed"
+      },
+      "CouponCommissionStatus": {
+        "type": "string",
+        "enum": [
+          "none",
+          "reserved",
+          "awaiting_budget",
+          "no_commission",
+          "after_campaign_end",
+          "released",
+          "paid",
+          "reversed"
+        ],
+        "description": "Pagamento da comissão da venda. none: sem lançamento (cupom sem comissão paga ou venda cancelada antes). reserved: comissão reservada na verba, paga no prazo. awaiting_budget: a verba acabou e a comissão só entra se a marca adicionar verba até o prazo. no_commission: o prazo passou sem verba. after_campaign_end: venda depois do fim da campanha, sem comissão. released: reservada e devolvida à verba (venda cancelada antes do pagamento). paid: paga ao creator. reversed: paga e estornada pelo cancelamento da venda.",
+        "example": "reserved"
       },
       "UpsertSaleBody": {
         "type": "object",
