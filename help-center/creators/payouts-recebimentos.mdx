@@ -1,6 +1,6 @@
 ---
 title: "Recebimentos"
-description: "Como e quando o pagamento cai na conta do criador"
+description: "Como e quando o pagamento fica disponível para o criador"
 ---
 
 # Recebimentos na Conty
@@ -8,91 +8,73 @@ description: "Como e quando o pagamento cai na conta do criador"
 ## Como funcionam os pagamentos na Conty
 
 <Steps>
-  <Step title="Entregue o conteudo">
-    Voce finaliza e envia o conteudo da campanha.
+  <Step title="Entregue o conteúdo">
+    Você finaliza e envia o conteúdo da campanha.
   </Step>
   <Step title="Marca analisa">
     A marca revisa e aprova ou recusa sua entrega.
   </Step>
   <Step title="Pagamento condicional">
-    O pagamento só existe após aprovação final da marca.
+    O pagamento só existe após a aprovação final da marca.
   </Step>
   <Step title="Recebimento">
-    Com aprovação, a Stripe processa e deposita automáticamente na sua conta cadastrada \
-    (em até 32 dias).
+    Com a aprovação, o valor entra na sua carteira e fica disponível para saque **30 dias** depois, na sua chave Pix cadastrada.
   </Step>
 </Steps>
 
 <Warning>
-  O pagamento na Conty e **condicional**: voce so recebe se a entrega final for aprovada pela marca.
+  O pagamento na Conty é **condicional**: você só recebe se a entrega final for aprovada pela marca.
 </Warning>
 
-O dinheiro cai na sua conta bancaria normalmente. No extrato/fatura, a identificacao do pagamento pode aparecer como **STRIPE**, que e a processadora de pagamentos da Conty.
-
 <Info>
-  No seu banco, o repasse pode aparecer com a descricao **STRIPE**.
+  Algumas campanhas podem levar mais de 30 dias. O prazo exato está sempre escrito na campanha. Detalhes em [Pagamentos para criadores](/pagamentos/criadores).
 </Info>
-
-### Por que o valor pode demorar para cair?
-
-Depois da aprovacao do conteudo, a Conty depende do fluxo de processamento e liberacao da **Stripe** (plataforma externa de pagamentos). Esse processo inclui validacoes financeiras e de seguranca antes do repasse final para sua conta, por isso o prazo pode chegar a **até 32 dias**.
 
 ### Formas de pagamento
 
-Na Conty, os pagamentos podem ser por **views** ou por **conteudo entregue**. Nao existe pagamento minimo obrigatorio para criadores.
+Na Conty, os pagamentos podem ser por **views** ou por **conteúdo entregue**. Não existe pagamento mínimo obrigatório para criadores.
 
 ## Taxa da plataforma (criadores)
 
-O uso da Conty e gratuito para criadores, mas existe uma taxa de **5%** sobre o valor recebido em cada campanha aprovada.
+O uso da Conty é gratuito para criadores, mas existe uma taxa de **5%** sobre o valor de cada campanha paga, descontada quando a campanha é concluída. Não há taxa no saque.
 
-**Exemplo rapido:**
+**Exemplo rápido:**
 
-- Se o valor da campanha for R\$ 100,00, a taxa e R\$ 5,00.
-- O valor liquido para o criador e R\$ 95,00.
+- Se o valor da campanha for R\$ 100,00, a taxa é R\$ 5,00.
+- O valor líquido para o criador é R\$ 95,00.
 
-Essa taxa se aplica somente quando houver pagamento aprovado. Se nao houver aprovacao final da entrega, nao ha repasse.
-
-<Note>
-  Resumo: a Conty so cobra a taxa quando existe repasse aprovado para o criador.
-</Note>
+Essa taxa se aplica somente quando houver pagamento aprovado. Se não houver aprovação final da entrega, não há repasse.
 
 ---
 
 ## Dúvidas comuns
 
 <AccordionGroup>
-  <Accordion title="Aprovacao da candidatura garante pagamento?">
-    Nao. A candidatura so libera o inicio da campanha. O pagamento depende da aprovacao final do conteudo.
+  <Accordion title="Aprovação da candidatura garante pagamento?">
+    Não. A candidatura só libera o início da campanha. O pagamento depende da aprovação final do conteúdo.
   </Accordion>
 
-  <Accordion title="Existe pagamento minimo?">
-    Nao. Cada campanha tem seu proprio valor.
+  <Accordion title="Existe pagamento mínimo?">
+    Não. Cada campanha tem seu próprio valor.
   </Accordion>
 
   <Accordion title="A Conty cobra alguma taxa do criador?">
-    Sim. A taxa da plataforma para criadores e de **5%** sobre cada valor recebido.
+    Sim. A taxa da plataforma para criadores é de **5%**, descontada quando a campanha é concluída.
   </Accordion>
 
-  <Accordion title="Quando eu recebo depois da aprovacao?">
-    Depois da aprovacao final, o Stripe pode levar até 32 dias para depositar.
-  </Accordion>
-
-  <Accordion title="Por que esse prazo pode demorar?">
-    Porque existe uma dependencia externa com a **Stripe**, que faz o processamento e a liberacao dos pagamentos. Antes do deposito final, a plataforma executa validacoes financeiras e de seguranca.
-  </Accordion>
-
-  <Accordion title="Como esse pagamento aparece no meu banco?">
-    O valor entra na sua conta normalmente e pode aparecer no extrato/fatura com a descricao **STRIPE**.
+  <Accordion title="Quando eu recebo depois da aprovação?">
+    O valor fica disponível para saque **30 dias** depois da aprovação final, ou no prazo escrito na campanha. O saque é feito na sua chave Pix cadastrada.
   </Accordion>
 
   <Accordion title="Preciso ter 18 anos para configurar a carteira?">
-    Sim. Essa e uma exigencia regulatoria do Stripe no Brasil.
+    Sim. É uma exigência regulatória da instituição de pagamento.
   </Accordion>
+
   <Accordion title="Quem é a instituição financeira responsável?">
-    A infraestrutura de contas de pagamento é prestada pelo **ASAAS Gestão Financeira IP S.A.** (CNPJ 19.540.550/0001-21), instituição de pagamento autorizada a funcionar pelo **Banco Central do Brasil** (BACEN). O processamento atual dos repasses para criadores é executado via **Stripe Connect**. A Conty atua exclusivamente como integradora tecnológica da experiência do produto, não sendo instituição financeira ou de pagamento.
+    A infraestrutura de contas de pagamento é prestada pelo **ASAAS Gestão Financeira IP S.A.** (CNPJ 19.540.550/0001-21), instituição de pagamento autorizada a funcionar pelo **Banco Central do Brasil** (BACEN). A Conty atua exclusivamente como integradora tecnológica da experiência do produto, não sendo instituição financeira ou de pagamento.
   </Accordion>
 </AccordionGroup>
 
 ---
 
-Duvidas sobre pagamento especifico? Fale com o [suporte](/help-center/contact).
+Dúvidas sobre um pagamento específico? Fale com o [suporte](/help-center/contact).

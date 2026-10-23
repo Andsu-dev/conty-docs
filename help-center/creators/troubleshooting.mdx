@@ -11,23 +11,7 @@ Encontrou algum problema no app? A maioria tem solução rápida. Confira abaixo
 
 <AccordionGroup>
   <Accordion title="Não consigo configurar minha carteira">
-    A carteira passa por três etapas no Stripe: **dados de pessoa física (PF)**, **verificação de identidade (KYC)** e **conta bancária**. Tudo pode ser feito pelo **app** ou pela **web**.
-
-    **Revise nesta ordem:**
-
-    1. **PF** — Conta PJ não serve; use conta bancária e titular PF alinhados ao seu cadastro
-    2. **KYC** — Documento legível, boa iluminação; refaça se a verificação falhar
-    3. **Banco** — Agência, conta e dígito corretos; titular igual ao da Conty
-    4. **CEP** — Se der erro, teste outro CEP válido da mesma região
-
-    <Warning>
-      **Agibank e Banco Inter não estão funcionando na plataforma no momento.**
-      Use uma conta de **pessoa física (PF)** vinculada ao seu CPF. Recomendamos o **Nubank**.
-      Conta CNPJ (PJ) não é aceita.
-    </Warning>
-
-    Guia passo a passo: [Pagamentos — configuração da wallet](/help-center/creators/payouts).
-    Se ainda travar após isso, fale com o [suporte](/help-center/contact) com prints da tela de erro.
+    Para sacar, você precisa do **cadastro facial aprovado** e de uma **chave Pix** cadastrada. A análise pode levar até 60 dias. O passo a passo está em [Carteira](/criadores/carteira) e em [Pagamentos para criadores](/pagamentos/criadores). Se ainda travar, fale com o [suporte](/help-center/contact) com prints da tela de erro.
   </Accordion>
 </AccordionGroup>
 
@@ -85,7 +69,7 @@ Encontrou algum problema no app? A maioria tem solução rápida. Confira abaixo
   <Accordion title="Não consigo fazer login">
     **Verifique:**
 
-    - Se você está usando o e-mail ou telefone correto
+    - Se você está usando o mesmo método de login do cadastro (Google, e-mail ou Apple)
     - Se a senha está correta (cuidado com maiúsculas e espaços)
     - Se sua conexão com a internet está funcionando
 
@@ -137,7 +121,7 @@ Encontrou algum problema no app? A maioria tem solução rápida. Confira abaixo
 
     1. Complete todas as informações do seu perfil
     2. Ative as notificações do app
-    3. Entre na [comunidade do WhatsApp](https://chat.whatsapp.com/JDMZhANc0Ig5J7NblMgu5b) para ver campanhas extras
+    3. Entre na [comunidade do WhatsApp](https://chat.whatsapp.com/BlXDCYEWCwmEg7vXcFuPmA) para ver campanhas extras
   </Accordion>
 
   <Accordion title="Aceitei uma campanha por engano">
@@ -284,55 +268,33 @@ Encontrou algum problema no app? A maioria tem solução rápida. Confira abaixo
 ## Problemas com pagamentos
 
 <Info>
-  **Modelo atual de pagamento:** Stripe Connect (processamento) | **Infraestrutura BaaS:** Asaas (instituição autorizada pelo BACEN).
-  O repasse é condicional e acontece após aprovação do conteúdo, com prazo de até 32 dias.
+  **Infraestrutura BaaS:** Asaas (instituição autorizada pelo BACEN). O repasse é condicional: o valor fica disponível para saque **30 dias** depois da aprovação do conteúdo, já com a taxa de 5% descontada, na chave Pix cadastrada. Algumas campanhas podem levar mais tempo, e o prazo está sempre escrito na campanha. Veja [Pagamentos para criadores](/pagamentos/criadores).
 </Info>
 
 <AccordionGroup>
   <Accordion title="Não consigo configurar minha carteira">
-    A carteira passa por três etapas no Stripe: **dados de pessoa física (PF)**, **verificação de identidade (KYC)** e **conta bancária**. Tudo pode ser feito pelo **app** ou pela **web**.
-
-    **Revise nesta ordem:**
-
-    1. **PF** — Conta PJ não serve; use conta bancária e titular PF alinhados ao seu cadastro
-    2. **KYC** — Documento legível, boa iluminação; refaça se a verificação falhar
-    3. **Banco** — Agência, conta e dígito corretos; titular igual ao da Conty
-    4. **CEP** — Se der erro, teste outro CEP válido da mesma região
-
-    <Warning>
-      **Agibank e Banco Inter não estão funcionando na plataforma no momento.**
-      Use uma conta de **pessoa física (PF)** vinculada ao seu CPF. Recomendamos o **Nubank**.
-      Conta CNPJ (PJ) não é aceita.
-    </Warning>
-
-    Guia passo a passo: [Pagamentos — configuração da wallet](/help-center/creators/payouts).
-    Se ainda travar após isso, fale com o [suporte](/help-center/contact) com prints da tela de erro.
+    Para sacar, você precisa do **cadastro facial aprovado** e de uma **chave Pix** cadastrada. A análise pode levar até 60 dias. O passo a passo está em [Carteira](/criadores/carteira) e em [Pagamentos para criadores](/pagamentos/criadores). Se ainda travar, fale com o [suporte](/help-center/contact) com prints da tela de erro.
   </Accordion>
 
-  <Accordion title="Dinheiro não caiu na minha conta">
+  <Accordion title="Meu saldo ainda não está disponível">
     **1. Houve aprovação final do conteúdo pela marca?**\
     Sem aprovação final não há repasse ([pagamento condicional](/help-center/rules/conditional-payment)).
 
-    **2. Já passou o prazo do Stripe?**\
-    Depois da aprovação, o depósito pode levar **até 32 dias**.
+    **2. Já passaram 30 dias?**<br />O valor fica disponível para saque **30 dias** depois da aprovação, ou no prazo escrito na campanha.
 
-    **3. Carteira ok?**\
-    Confira se a verificação (KYC) foi concluída e se os dados bancários estão corretos — veja [Pagamentos](/help-center/creators/payouts).
-
-    **4. Extrato**\
-    O lançamento pode aparecer como **STRIPE** no extrato do banco.
+    **3. Carteira ok?**<br />Confira se o cadastro facial foi aprovado e se a chave Pix está cadastrada — veja [Carteira](/criadores/carteira).
 
     Se tudo acima estiver certo e mesmo assim não caiu, entre em contato com o [suporte](/help-center/contact) com campanha, data de aprovação e print do status no app.
   </Accordion>
 
   <Accordion title="Meu pagamento está demorando">
-    **Lembre-se:** Após a aprovação do seu vídeo, o pagamento pode levar **até 32 dias** para cair na sua conta bancária. Esse prazo segue as regras de processamento do Stripe para o Brasil.
+    **Lembre-se:** o valor fica disponível para saque **30 dias** depois da aprovação do conteúdo. Algumas campanhas podem levar mais tempo, e o prazo está sempre escrito na campanha.
 
     **Verifique também:**
 
     - Se sua campanha foi realmente aprovada pela marca
-    - Se sua conta bancária está cadastrada corretamente no app
-    - Se você completou a verificação de identidade solicitada pelo Stripe
+    - Se sua chave Pix está cadastrada no app
+    - Se o seu cadastro facial foi aprovado
 
     Se já passou o prazo e você ainda não recebeu, entre em contato com o suporte.
   </Accordion>
@@ -340,31 +302,21 @@ Encontrou algum problema no app? A maioria tem solução rápida. Confira abaixo
   <Accordion title="O valor recebido está errado">
     Antes de entrar em contato com o suporte, verifique o seguinte:
 
-    A Conty retém **5%** de taxa sobre cada campanha aprovada. O criador recebe os **95% restantes**.
+    A Conty desconta **5%** de taxa quando a campanha é concluída. O criador recebe os **95% restantes**.
 
-    Exemplo: campanha de R$ 100,00 = você recebe R$ 95,00.
+    Exemplo: campanha de R\$ 100,00 = você recebe R\$ 95,00.
 
     Se a diferença entre o valor esperado e o valor recebido for exatamente 5%, o pagamento está correto.
 
     Se o valor recebido for diferente mesmo após descontar os 5%, entre em contato com o suporte em [contato@appconty.com](mailto:contato@appconty.com) informando o nome da campanha, o valor que aparecia e o valor que você recebeu.
   </Accordion>
 
-  <Accordion title="Não consigo cadastrar minha conta bancária">
-    Verifique se você está inserindo os dados corretamente:
-
-    - **Banco** — Selecione o banco correto na lista
-    - **Agência** — Apenas números, sem traços
-    - **Conta** — Número da conta com dígito verificador
-    - **Tipo** — Conta corrente ou poupança
-    - **Titularidade** — A conta bancária deve estar no seu nome
-    - **Pessoa física** — Cadastre conta PF (não PJ)
-    - **CEP** — Se der erro, tente outro CEP válido da mesma região
-
-    O Stripe aceita a maioria dos bancos brasileiros, incluindo bancos digitais.
+  <Accordion title="Não consigo cadastrar minha chave Pix">
+    Use uma chave Pix sua: conta pessoa física no seu nome ou conta da sua empresa. Chave de terceiros não é aceita. Veja [Perguntas frequentes](/pagamentos/perguntas-frequentes).
   </Accordion>
 
   <Accordion title="Minha verificação de identidade falhou">
-    O Stripe pode solicitar documentos para verificar sua identidade. Se a verificação falhou:
+    O saque exige o cadastro facial aprovado. Se a verificação falhou:
 
     - Certifique-se de que o documento está legível e não está cortado
     - Use um documento válido (RG ou CNH)
