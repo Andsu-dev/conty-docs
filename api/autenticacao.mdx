@@ -63,11 +63,33 @@ Chave ausente, malformada, revogada ou desconhecida responde sempre igual:
 {
   "error": {
     "code": "invalid_api_key",
-    "message": "Chave de API inválida.",
+    "message": "Chave de API ausente, inválida ou revogada.",
     "request_id": "req_01JC8Z3K9W2Q4R6T8V0X2Z4B6D"
   }
 }
 ```
+
+## Disponibilidade
+
+A API pública, os webhooks e os cupons são liberados por marca pela Conty. Fale com o seu contato na Conty para ligar o que a sua integração precisa. Enquanto um recurso não está liberado, a chave continua válida e a API responde assim:
+
+| O que não está liberado | Resposta |
+|---|---|
+| API pública e webhooks | `403 open_api_disabled` em toda rota de `/public/v1` |
+| Cupons | `403 coupons_disabled` nas rotas `/coupons` |
+| Comissão do cupom | O cupom e as vendas funcionam, com `commission_rate_bps` e `commission_cents` em `null`. Cupom só de rastreio segue com taxa `0` |
+
+```json 403
+{
+  "error": {
+    "code": "open_api_disabled",
+    "message": "A API pública não está liberada para esta conta.",
+    "request_id": "req_01JC8Z3K9W2Q4R6T8V0X2Z4B6D"
+  }
+}
+```
+
+Nos tenants com planos, a marca sem plano ativo recebe `403 plan_required`. A chave não é revogada e volta a funcionar quando a marca assina.
 
 ## Criar uma chave
 
