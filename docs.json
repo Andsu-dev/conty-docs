@@ -34,7 +34,9 @@
     }
   },
   "styling": {
-    "css": ["/custom.css"]
+    "css": [
+      "/custom.css"
+    ]
   },
   "api": {
     "playground": {
@@ -602,124 +604,190 @@
         "description": "Integre o seu sistema com a Conty",
         "icon": "code",
         "tag": "Beta",
-        "tabs": [
+        "versions": [
           {
-            "tab": "Comece aqui",
-            "groups": [
+            "version": "v1",
+            "default": true,
+            "tabs": [
               {
-                "group": "Comece aqui",
-                "pages": [
-                  "api/introducao",
-                  "api/quickstart",
-                  "api/autenticacao"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Guias",
-            "groups": [
-              {
-                "group": "Guias",
-                "pages": [
-                  "api/guias/cupom-por-creator"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Webhooks",
-            "groups": [
-              {
-                "group": "Visão geral",
-                "pages": [
-                  "api/webhooks/visao-geral"
-                ]
-              },
-              {
-                "group": "Segurança",
-                "pages": [
-                  "api/webhooks/assinatura"
-                ]
-              },
-              {
-                "group": "Eventos",
-                "pages": [
-                  "api/webhooks/eventos/candidaturas",
-                  "api/webhooks/eventos/missoes",
-                  "api/webhooks/eventos/teste"
-                ]
-              },
-              {
-                "group": "Entrega",
-                "pages": [
-                  "api/webhooks/retentativas"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Referência",
-            "groups": [
-              {
-                "group": "API Conty",
-                "pages": [
-                  "api/referencia/introducao",
+                "tab": "Comece aqui",
+                "groups": [
                   {
-                    "group": "Conta",
-                    "expanded": false,
-                    "openapi": "api/openapi.json",
+                    "group": "Comece aqui",
                     "pages": [
-                      "GET /me"
-                    ]
-                  },
-                  {
-                    "group": "Cupons",
-                    "expanded": false,
-                    "openapi": "api/openapi.json",
-                    "pages": [
-                      "api/referencia/cupons",
-                      "POST /coupons",
-                      "GET /coupons",
-                      "GET /coupons/{id}",
-                      "PATCH /coupons/{id}",
-                      "POST /coupons/{id}/assign",
-                      "POST /coupons/{id}/unassign"
-                    ]
-                  },
-                  {
-                    "group": "Vendas",
-                    "expanded": false,
-                    "openapi": "api/openapi.json",
-                    "pages": [
-                      "PUT /coupons/{id}/sales/{external_id}",
-                      "GET /coupons/{id}/sales"
+                      "api/introducao",
+                      "api/quickstart",
+                      "api/autenticacao"
                     ]
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "tab": "IA",
-            "groups": [
+              },
               {
-                "group": "IA",
-                "pages": [
-                  "api/ia/visao-geral",
-                  "api/ia/mcp",
-                  "api/ia/skills"
+                "tab": "Guias",
+                "groups": [
+                  {
+                    "group": "Guias",
+                    "pages": [
+                      "api/guias/cupom-por-creator",
+                      "api/guias/acompanhar-quadro"
+                    ]
+                  }
                 ]
-              }
-            ]
-          },
-          {
-            "tab": "Changelog",
-            "groups": [
+              },
               {
-                "group": "Changelog",
-                "pages": [
-                  "api/changelog"
+                "tab": "Webhooks",
+                "groups": [
+                  {
+                    "group": "Visão geral",
+                    "pages": [
+                      "api/webhooks/visao-geral"
+                    ]
+                  },
+                  {
+                    "group": "Segurança",
+                    "pages": [
+                      "api/webhooks/assinatura"
+                    ]
+                  },
+                  {
+                    "group": "Eventos",
+                    "pages": [
+                      "api/webhooks/eventos/candidaturas",
+                      "api/webhooks/eventos/missoes",
+                      "api/webhooks/eventos/teste"
+                    ]
+                  },
+                  {
+                    "group": "Entrega",
+                    "pages": [
+                      "api/webhooks/retentativas"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Referência",
+                "groups": [
+                  {
+                    "group": "API Conty",
+                    "pages": [
+                      "api/referencia/introducao",
+                      {
+                        "group": "Conta",
+                        "expanded": false,
+                        "openapi": "api/openapi.json",
+                        "pages": [
+                          "GET /me"
+                        ]
+                      },
+                      {
+                        "group": "Cupons",
+                        "expanded": false,
+                        "openapi": "api/openapi.json",
+                        "pages": [
+                          "api/referencia/cupons",
+                          "POST /coupons",
+                          "GET /coupons",
+                          "GET /coupons/{id}",
+                          "PATCH /coupons/{id}",
+                          "POST /coupons/{id}/assign",
+                          "POST /coupons/{id}/unassign"
+                        ]
+                      },
+                      {
+                        "group": "Vendas",
+                        "expanded": false,
+                        "openapi": "api/openapi.json",
+                        "pages": [
+                          "PUT /coupons/{id}/sales/{external_id}",
+                          "GET /coupons/{id}/sales"
+                        ]
+                      },
+                      {
+                        "group": "Campanhas",
+                        "expanded": false,
+                        "openapi": "api/openapi.json",
+                        "pages": [
+                          "api/referencia/campanhas",
+                          "GET /campaigns",
+                          "GET /campaigns/{id}",
+                          "api/referencia/em-breve/criar-campanha"
+                        ]
+                      },
+                      {
+                        "group": "Creators",
+                        "tag": "Em breve",
+                        "expanded": false,
+                        "pages": [
+                          "api/referencia/em-breve/buscar-creators"
+                        ]
+                      },
+                      {
+                        "group": "Quadro",
+                        "expanded": false,
+                        "openapi": "api/openapi.json",
+                        "pages": [
+                          "GET /campaigns/{id}/stages",
+                          "GET /campaigns/{id}/items",
+                          "api/referencia/em-breve/aprovar-candidatura",
+                          "api/referencia/em-breve/recusar-creator",
+                          "api/referencia/em-breve/aprovar-entrega",
+                          "api/referencia/em-breve/pedir-alteracao"
+                        ]
+                      },
+                      {
+                        "group": "Missões",
+                        "expanded": false,
+                        "openapi": "api/openapi.json",
+                        "pages": [
+                          "api/referencia/missoes",
+                          "GET /missions/{id}"
+                        ]
+                      },
+                      {
+                        "group": "Chat",
+                        "tag": "Em breve",
+                        "expanded": false,
+                        "pages": [
+                          "api/referencia/em-breve/enviar-mensagem",
+                          "api/referencia/em-breve/listar-conversas"
+                        ]
+                      },
+                      {
+                        "group": "Comunidades",
+                        "tag": "Em breve",
+                        "expanded": false,
+                        "pages": [
+                          "api/referencia/em-breve/listar-comunidades",
+                          "api/referencia/em-breve/listar-membros"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "IA",
+                "groups": [
+                  {
+                    "group": "IA",
+                    "pages": [
+                      "api/ia/visao-geral",
+                      "api/ia/mcp",
+                      "api/ia/skills"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Changelog",
+                "groups": [
+                  {
+                    "group": "Changelog",
+                    "pages": [
+                      "api/changelog"
+                    ]
+                  }
                 ]
               }
             ]

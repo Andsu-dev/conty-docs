@@ -14,10 +14,24 @@ Toda mudança no contrato da API aparece aqui antes de entrar no ar. Enquanto a 
   Pagamento da comissão do cupom.
 
   **API**
-  - `CouponSale` traz `commission_status` (`none`, `reserved`, `awaiting_budget`, `no_commission`, `after_campaign_end`, `released`, `paid`, `reversed`), `commission_due_on`, `commission_paid_at` e `commission_reversed_at`.
+  - `CouponSale` traz `commission_status` (`none`, `reserved`, `awaiting_budget`, `no_commission`, `after_campaign_end`, `released`, `paid`, `reversed`, ou `null` quando a comissão do cupom não está liberada para a marca), `commission_due_on`, `commission_paid_at` e `commission_reversed_at`.
+  - `amount_cents` da venda é o valor pago pelo cliente nos produtos, já com o desconto do cupom, sem frete e sem impostos destacados. A comissão é calculada sobre esse valor.
+  - O creator é avisado no app quando o código ou o desconto do cupom mudam, quando o cupom é cancelado e quando é desvinculado (`POST /coupons/{id}/unassign`).
   - `Coupon.totals` traz `commission_reserved_cents`, `commission_paid_cents` e `commission_awaiting_cents`.
   - A Conty paga a comissão 7 dias depois da venda, com a verba que a marca separa na campanha; o creator saca 30 dias depois do pagamento. Reembolso pelo `PUT` com `canceled`: até o 7º dia a comissão sai, até o 37º é estornada, depois fica com o creator. Ver [Pagamento da comissão](/api/referencia/cupons#pagamento-da-comissão).
   - Campos aditivos: nada muda para quem já integra.
+</Update>
+
+<Update label="Campanhas e quadro" description="23 de outubro de 2026">
+  Leitura das campanhas e do quadro pela chave, com os mesmos status, rótulos e contagens do painel. Só leitura.
+
+  **API**
+  - `GET /campaigns` e `GET /campaigns/{id}`: campanha é o acordo (`kind: "agreement"`) ou a avulsa (`kind: "campaign"`), com um id só, o mesmo `data.campaign.id` dos webhooks. Filtro por `status` (vários, separados por vírgula) e `q`, paginação por cursor. Id de bloco de acordo responde `404 not_found`.
+  - `GET /campaigns/{id}/stages`: as etapas do quadro com `count`, a unidade da contagem (`unit`: `missions`, `creators` ou `applications`) e as `sorts` e `filters` que valem em cada etapa.
+  - `GET /campaigns/{id}/items`: os itens de uma etapa, com todos os filtros e ordenações do quadro (inclusive `sort=match`), `total` filtrado e `compatible_count`. Cursor de posição, amarrado à etapa, aos filtros e à ordenação.
+  - `GET /missions/{id}`: a missão com entregas, conteúdo enviado, link do post por rede, métricas, datas, valor e cupom.
+  - `money_visible`: quando a marca não vê preço, todo campo `*_cents` e `*_bps` sai `null`.
+  - Novo erro `403 forbidden` para chave sem acesso a campanhas ou de conta de agência. Rotas de cupom passam a documentar `403 coupons_disabled`.
 </Update>
 
 <Update label="0.1.0-beta" description="21 de outubro de 2026">

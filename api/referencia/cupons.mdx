@@ -17,20 +17,21 @@ O cupom pertence a um creator numa campanha, ou fica disponível na campanha at�
 2. `POST /coupons` cria o cupom com esse `mission_id`. O creator é avisado no app.
 3. `PUT /coupons/{id}/sales/{external_id}` registra cada venda e cada estorno, de forma idempotente.
 4. `GET /coupons/{id}` e `GET /coupons/{id}/sales` mostram os totais e as vendas.
-5. `PATCH /coupons/{id}` troca o código ou cancela o cupom.
+5. `PATCH /coupons/{id}` troca o código ou o desconto, ou cancela o cupom. O creator dono é avisado no app.
 
 ### Com cupons disponíveis
 
 1. `POST /coupons` com `campaign_id` cadastra um cupom disponível, sem creator, na campanha. Ninguém é avisado.
 2. `GET /coupons?campaign_id=<id>&assigned=false&status=active` lista os cupons disponíveis.
 3. `POST /coupons/{id}/assign` com `mission_id` vincula o cupom livre ao creator da missão. O creator é avisado no app.
-4. `POST /coupons/{id}/unassign` desvincula o cupom do creator: continua ativo e fica disponível.
+4. `POST /coupons/{id}/unassign` desvincula o cupom do creator: continua ativo e fica disponível. O creator que era o dono é avisado no app.
 
 ## Regras
 
 - Um cupom **ativo** por creator em cada campanha. Em acordo, a campanha é o acordo.
 - O `code` é normalizado (sem espaço nas pontas, em maiúsculas) e aceita `A-Z`, `0-9`, `_` e `-`, de 3 a 40 caracteres. Não pode repetir entre os cupons ativos da marca.
 - Cancelar é definitivo. As vendas continuam, e a marca pode criar outro cupom para o mesmo creator.
+- `amount_cents` é o valor pago pelo cliente nos produtos, já com o desconto do cupom, sem frete e sem impostos destacados.
 - A comissão da venda é `round(amount_cents * commission_rate_bps / 10000)`, com a taxa da campanha no momento em que a venda é criada, congelada na venda.
 - Taxa `0` é cupom só de rastreio: as vendas são registradas e a comissão é `0`.
 
@@ -41,7 +42,7 @@ O cupom pertence a um creator numa campanha, ou fica disponível na campanha at�
 - Vincular ao creator que já é o dono não muda nada e responde `200`, sem novo aviso.
 - **Trocar:** se o creator já tem cupom ativo na campanha, o `assign` deixa o antigo disponível (continua `active`, sem creator; não é cancelado) e vincula o novo.
 - A missão tem que ser da mesma campanha do cupom (`422 coupon_campaign_mismatch`) e não pode estar fechada (`422 mission_closed`).
-- Desvincular não avisa ninguém. Cupom cancelado não pode ser vinculado nem desvinculado (`409 coupon_canceled`).
+- Desvincular avisa no app o creator que era o dono. Cupom cancelado não pode ser vinculado nem desvinculado (`409 coupon_canceled`).
 - `GET /coupons` filtra com `assigned=true` (só cupons com creator) ou `assigned=false` (só os disponíveis).
 
 ## Atribuição da venda
@@ -164,7 +165,7 @@ Com taxa maior que zero, a marca separa uma verba de comissão na campanha, no p
 </ResponseField>
 
 <ResponseField name="amount_cents" type="integer" required>
-  Valor da venda em centavos, maior que zero.
+  Valor pago pelo cliente nos produtos, em centavos, maior que zero: já com o desconto do cupom, sem frete e sem impostos destacados. A comissão é calculada sobre esse valor.
 </ResponseField>
 
 <ResponseField name="status" type="string" required>
@@ -187,8 +188,8 @@ Com taxa maior que zero, a marca separa uma verba de comissão na campanha, no p
   Comissão do creator nesta venda. `null` quando a campanha não tinha taxa.
 </ResponseField>
 
-<ResponseField name="commission_status" type="string" required>
-  Pagamento da comissão da venda (ver [Pagamento da comissão](#pagamento-da-comissão)):
+<ResponseField name="commission_status" type="string | null" required>
+  Pagamento da comissão da venda (ver [Pagamento da comissão](#pagamento-da-comissão)). `null` quando a comissão do cupom não está liberada para a sua marca.
 
   - `none`: sem pagamento (cupom sem comissão paga, ou venda cancelada antes).
   - `reserved`: reservada na verba, paga em `commission_due_on`.
